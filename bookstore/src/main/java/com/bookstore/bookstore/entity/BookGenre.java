@@ -24,14 +24,14 @@ public class BookGenre {
     @Column(name = "id")
     private Integer id;
 
-    @Column(name = "colums")
+    @Column(name = "description")
     private String description;
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
-        name = "bookss_genre",
+        name = "genre_book",
         joinColumns = @JoinColumn(name = "book_id"),
-        inverseJoinColumns = @JoinColumn(name = "genre_id")
+        inverseJoinColumns = @JoinColumn(name = "bookgenre_id")
     )
     private List<Book> books;
 }

@@ -31,7 +31,7 @@ public class BookReview {
 
     @ManyToOne
     @JoinColumn(name = "book_id", referencedColumnName = "id")
-    private Book book;
+    private Book reviewedBooks;
 
     @Column(name = "rating")
     private Double rating;

@@ -27,9 +27,9 @@ public class BookAuthor {
 
     @ManyToMany
     @JoinTable(
-        name = "bookss_author",
+        name = "author_book",
         joinColumns = @JoinColumn(name="book_id"),
-        inverseJoinColumns = @JoinColumn(name="author_id")
+        inverseJoinColumns = @JoinColumn(name="bookauthor_id")
     )
     private Set<Book> books;
 }

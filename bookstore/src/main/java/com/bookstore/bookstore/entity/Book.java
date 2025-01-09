@@ -41,7 +41,7 @@ public class Book {
     @ManyToMany(mappedBy = "books", fetch = FetchType.LAZY)
     private List<BookGenre> genre;
 
-    @OneToMany(mappedBy = "book",fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "reviewedBooks",fetch = FetchType.LAZY)
     private List<BookReview> reviews;
 
 
